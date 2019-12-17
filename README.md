@@ -1,0 +1,1 @@
+This is an example of abusing the browserify `builtins` option to do a global module replace

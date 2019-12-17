@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "browserify": "^16.5.0"
+  },
+  "dependencies": {
+    "plaid": "^4.3.0"
+  }
+}
