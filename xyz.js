@@ -1,4 +1,11 @@
-console.log('using the shim for bluebird!')
+main()
+
+function * createGenerator () {
+  yield Promise.resolve(3)
+  yield Promise.resolve(2)
+  yield Promise.resolve(1)
+  return 42
+}
 
 async function coroutine (createGenerator) {
   const generator = createGenerator()
@@ -14,6 +21,8 @@ async function coroutine (createGenerator) {
   return next.value
 }
 
-module.exports = {
-  coroutine,
+async function main () {
+  const result = await coroutine(createGenerator)
+  console.log({ result })
 }
+
