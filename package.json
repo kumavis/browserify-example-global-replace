@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node index.js | node"
+  },
   "devDependencies": {
     "browserify": "^16.5.0"
   },
